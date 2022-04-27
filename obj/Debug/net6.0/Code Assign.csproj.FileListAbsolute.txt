@@ -1,0 +1,17 @@
+D:\VTC Academy\OOP\Assignment\Code Assign\obj\Debug\net6.0\Code Assign.csproj.AssemblyReference.cache
+D:\VTC Academy\OOP\Assignment\Code Assign\obj\Debug\net6.0\Code Assign.GeneratedMSBuildEditorConfig.editorconfig
+D:\VTC Academy\OOP\Assignment\Code Assign\obj\Debug\net6.0\Code Assign.AssemblyInfoInputs.cache
+D:\VTC Academy\OOP\Assignment\Code Assign\obj\Debug\net6.0\Code Assign.AssemblyInfo.cs
+D:\VTC Academy\OOP\Assignment\Code Assign\obj\Debug\net6.0\Code Assign.csproj.CoreCompileInputs.cache
+D:\VTC Academy\OOP\Assignment\Code Assign\bin\Debug\net6.0\Code Assign.exe
+D:\VTC Academy\OOP\Assignment\Code Assign\bin\Debug\net6.0\Code Assign.deps.json
+D:\VTC Academy\OOP\Assignment\Code Assign\bin\Debug\net6.0\Code Assign.runtimeconfig.json
+D:\VTC Academy\OOP\Assignment\Code Assign\bin\Debug\net6.0\Code Assign.dll
+D:\VTC Academy\OOP\Assignment\Code Assign\bin\Debug\net6.0\Code Assign.pdb
+D:\VTC Academy\OOP\Assignment\Code Assign\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\VTC Academy\OOP\Assignment\Code Assign\obj\Debug\net6.0\Code Assign.csproj.CopyComplete
+D:\VTC Academy\OOP\Assignment\Code Assign\obj\Debug\net6.0\Code Assign.dll
+D:\VTC Academy\OOP\Assignment\Code Assign\obj\Debug\net6.0\refint\Code Assign.dll
+D:\VTC Academy\OOP\Assignment\Code Assign\obj\Debug\net6.0\Code Assign.pdb
+D:\VTC Academy\OOP\Assignment\Code Assign\obj\Debug\net6.0\Code Assign.genruntimeconfig.cache
+D:\VTC Academy\OOP\Assignment\Code Assign\obj\Debug\net6.0\ref\Code Assign.dll
