@@ -32,27 +32,36 @@ static void Menu()
                     case 2:
                         if (books.NumberOfBooks() > 0)
                         {
-                            string idBook;
-                            Console.Write("Nhap ma sach: ");
-                            idBook = Console.ReadLine() ?? "";
-                            if (books.Update(idBook))
+                            while (true)
                             {
-                                do
+                                string idBook;
+                                Console.Write("Nhap ma sach: ");
+                                idBook = Console.ReadLine() ?? "";
+                                if (books.Update(idBook))
                                 {
-                                    Console.Write("Ban co muon cap nhat thong tin?(Y/N): ");
-                                    option = Convert.ToChar(Console.ReadLine() ?? "");
-                                    if (option == 'y' || option == 'Y')
+                                    do
                                     {
-                                        books.CheckUpdate(true);
-                                        Console.WriteLine("Thong tin da duoc cap nhat!");
-                                        break;
-                                    }
-                                    else if (option == 'n' || option == 'N')
-                                    {
-                                        books.CheckUpdate(false);
-                                        break;
-                                    }
-                                } while (option == 'y' || option == 'Y' || option == 'n' || option == 'N');
+                                        Console.Write("Ban co muon cap nhat thong tin?(Y/N): ");
+                                        option = Convert.ToChar(Console.ReadLine() ?? "");
+                                        if (option == 'y' || option == 'Y')
+                                        {
+                                            books.CheckUpdate(true);
+                                            Console.WriteLine("Thong tin da duoc cap nhat!");
+                                            break;
+                                        }
+                                        else if (option == 'n' || option == 'N')
+                                        {
+                                            books.CheckUpdate(false);
+                                            break;
+                                        }
+                                    } while (option == 'y' || option == 'Y' || option == 'n' || option == 'N');
+                                }
+                                Console.Write("Ban muon tiep tuc?(Y/N): ");
+                                option = Convert.ToChar(Console.ReadLine() ?? "");
+                                if (option == 'n' || option == 'N')
+                                {
+                                    break;
+                                }
                             }
                         }
                         else
@@ -98,27 +107,36 @@ static void Menu()
                     case 2:
                         if (members.NumberOfMembers() > 0)
                         {
-                            string idMember;
-                            Console.Write("Nhap ma the: ");
-                            idMember = Console.ReadLine() ?? "";
-                            if (members.Update(idMember))
+                            while (true)
                             {
-                                do
+                                string idMember;
+                                Console.Write("Nhap ma the: ");
+                                idMember = Console.ReadLine() ?? "";
+                                if (members.Update(idMember))
                                 {
-                                    Console.Write("Ban co muon cap nhat thong tin?(Y/N): ");
-                                    option = Convert.ToChar(Console.ReadLine() ?? "");
-                                    if (option == 'y' || option == 'Y')
+                                    do
                                     {
-                                        members.CheckUpdate(true);
-                                        Console.WriteLine("Thong tin da duoc cap nhat!");
-                                        break;
-                                    }
-                                    else if (option == 'n' || option == 'N')
-                                    {
-                                        members.CheckUpdate(false);
-                                        break;
-                                    }
-                                } while (option == 'y' || option == 'Y' || option == 'n' || option == 'N');
+                                        Console.Write("Ban co muon cap nhat thong tin?(Y/N): ");
+                                        option = Convert.ToChar(Console.ReadLine() ?? "");
+                                        if (option == 'y' || option == 'Y')
+                                        {
+                                            members.CheckUpdate(true);
+                                            Console.WriteLine("Thong tin da duoc cap nhat!");
+                                            break;
+                                        }
+                                        else if (option == 'n' || option == 'N')
+                                        {
+                                            members.CheckUpdate(false);
+                                            break;
+                                        }
+                                    } while (option == 'y' || option == 'Y' || option == 'n' || option == 'N');
+                                }
+                                Console.Write("Ban muon tiep tuc?(Y/N): ");
+                                option = Convert.ToChar(Console.ReadLine() ?? "");
+                                if (option == 'n' || option == 'N')
+                                {
+                                    break;
+                                }
                             }
                         }
                         else
