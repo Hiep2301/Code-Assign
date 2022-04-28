@@ -1,1 +1,14 @@
-[{"idMember":"a","nameMember":"n","idCard":"123456789","dateCreated":"12"},{"idMember":"b","nameMember":"r","idCard":"123456789","dateCreated":"23"}]
+[
+  {
+    "idMember": "a",
+    "nameMember": "n",
+    "idCard": "123456789",
+    "dateCreated": "12"
+  },
+  {
+    "idMember": "b",
+    "nameMember": "r",
+    "idCard": "123456789",
+    "dateCreated": "23"
+  }
+]

@@ -1,1 +1,30 @@
-[{"idBook":"a","nameBook":"b","authorName":"b","qtyInStock":2,"category":"b"},{"idBook":"b","nameBook":"t","authorName":"t","qtyInStock":3,"category":"t"},{"idBook":"c","nameBook":"c","authorName":"c","qtyInStock":1,"category":"c"},{"idBook":"q","nameBook":"q","authorName":"q","qtyInStock":1,"category":"q"}]
+[
+  {
+    "idBook": "a",
+    "nameBook": "b",
+    "authorName": "b",
+    "qtyInStock": 2,
+    "category": "b"
+  },
+  {
+    "idBook": "b",
+    "nameBook": "t",
+    "authorName": "t",
+    "qtyInStock": 3,
+    "category": "t"
+  },
+  {
+    "idBook": "c",
+    "nameBook": "c",
+    "authorName": "c",
+    "qtyInStock": 1,
+    "category": "c"
+  },
+  {
+    "idBook": "q",
+    "nameBook": "q",
+    "authorName": "q",
+    "qtyInStock": 1,
+    "category": "q"
+  }
+]
