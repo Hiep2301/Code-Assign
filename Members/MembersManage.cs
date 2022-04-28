@@ -132,7 +132,8 @@ public class MembersManage
         Console.WriteLine("----------------------------------------------------------------------");
         foreach (Members member in listMembers)
         {
-            Console.WriteLine($"{member.idMember,-8} {member.nameMember,-22} {member.idCard,-17} {member.dateCreated,-19}");
+            DateTime dateTime = DateTime.ParseExact(member.dateCreated ?? "", "ddMMyyyy", null);
+            Console.WriteLine($"{member.idMember,-8} {member.nameMember,-22} {member.idCard,-17} {dateTime.ToString("dd/MM/yyyy"),-19}");
         }
         Console.WriteLine("======================================================================");
     }
