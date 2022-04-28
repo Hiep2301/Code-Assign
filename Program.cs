@@ -77,8 +77,7 @@ static void Menu()
                         }
                         break;
                 }
-                Console.Write($"Nhap phim bat ky de quay lai menu chinh...");
-                Console.ReadKey();
+                WaitForButton("Nhap phim bat ky de quay lai menu chinh...");
                 break;
 
             case 2:
@@ -144,8 +143,7 @@ static void Menu()
                         }
                         break;
                 }
-                Console.Write($"Nhap phim bat ky de quay lai menu chinh...");
-                Console.ReadKey();
+                WaitForButton("Nhap phim bat ky de quay lai menu chinh...");
                 break;
 
             case 3:
@@ -179,8 +177,7 @@ static void Menu()
                         }
                         break;
                 }
-                Console.Write($"Nhap phim bat ky de quay lai menu chinh...");
-                Console.ReadKey();
+                WaitForButton("Nhap phim bat ky de quay lai menu chinh...");
                 break;
 
         }
@@ -264,4 +261,10 @@ static int SubMenu_LoanCard()
         int.TryParse(Console.ReadLine(), out choice);
     } while (choice < 1 || choice > 3);
     return choice;
+}
+
+static void WaitForButton(string msg)
+{
+    Console.Write($"{msg}");
+    Console.ReadKey();
 }
