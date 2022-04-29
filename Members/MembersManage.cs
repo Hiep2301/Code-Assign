@@ -179,13 +179,18 @@ public class MembersManage
 
     public bool IsNumber(string idCard)
     {
+        bool check = true;
         foreach (char ch in idCard)
         {
-            if (char.IsNumber(ch))
+            if (!char.IsNumber(ch))
             {
-                return true;
+                check = false;
             }
         }
-        return false;
+        if (check == false)
+        {
+            return false;
+        }
+        return true;
     }
 }
