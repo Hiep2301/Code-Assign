@@ -5,5 +5,5 @@ public class LoanCards
     public string? nameBook;
     public string? idBook;
     public string? dateCreated;
-    public string? dateCancled;
+    public string? dateCanceled;
 }
