@@ -51,10 +51,10 @@ public class BooksManage
 
     public bool Update(string idBook)
     {
-        Console.Clear();
         Books book = FindByIdBook(idBook);
         if (book != null)
         {
+            Console.Clear();
             Console.WriteLine("======================================================================");
             Console.WriteLine("Cap nhat thong tin sach");
             Console.WriteLine("======================================================================");
@@ -87,7 +87,7 @@ public class BooksManage
             return;
         }
     }
-    
+
     public void Display()
     {
         Console.Clear();

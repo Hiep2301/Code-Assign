@@ -67,10 +67,10 @@ public class MembersManage
 
     public bool Update(string idMember)
     {
-        Console.Clear();
         Members member = FindByIdMember(idMember);
         if (member != null)
         {
+            Console.Clear();
             Console.WriteLine("======================================================================");
             Console.WriteLine("Cap nhat thong tin the");
             Console.WriteLine("======================================================================");
