@@ -28,8 +28,19 @@ public class LoanCardsManage
         Console.WriteLine("======================================================================");
         Console.WriteLine("Tao moi the muon sach");
         Console.WriteLine("======================================================================");
-        Console.Write("Nhap ma phieu muon: ");
-        loanCard.idLoanCard = Console.ReadLine() ?? "";
+        while (true)
+        {
+            Console.Write("Nhap ma phieu muon: ");
+            loanCard.idLoanCard = Console.ReadLine() ?? "";
+            if (CheckIdLoanCard(loanCard.idLoanCard))
+            {
+                TextColor(ConsoleColor.Yellow, "Ma phieu muon da ton tai, vui long nhap lai!");
+            }
+            else
+            {
+                break;
+            }
+        }
         while (true)
         {
             try
@@ -132,6 +143,18 @@ public class LoanCardsManage
         foreach (Books book in listBooks)
         {
             if (book.idBook == idBook)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool CheckIdLoanCard(string idLoanCard)
+    {
+        foreach (LoanCards loanCard in listLoanCards)
+        {
+            if (loanCard.idLoanCard == idLoanCard)
             {
                 return true;
             }
