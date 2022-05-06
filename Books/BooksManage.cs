@@ -27,7 +27,7 @@ public class BooksManage
             book.idBook = Console.ReadLine() ?? "";
             if (CheckId(book.idBook))
             {
-                Console.WriteLine("Ma sach da ton tai, vui long nhap lai");
+                TextColor(ConsoleColor.Yellow, " *Ma sach da ton tai, vui long nhap lai!");
             }
             else
             {
@@ -71,7 +71,7 @@ public class BooksManage
         }
         else
         {
-            Console.WriteLine($"Sach co ma {idBook} khong ton tai.");
+            TextColor(ConsoleColor.Yellow, $"Sach co ma {idBook} khong ton tai!");
             return false;
         }
     }
@@ -142,5 +142,12 @@ public class BooksManage
             Count = listBooks.Count;
         }
         return Count;
+    }
+
+    void TextColor(ConsoleColor color, string str)
+    {
+        Console.ForegroundColor = color;
+        Console.WriteLine(str);
+        Console.ResetColor();
     }
 }

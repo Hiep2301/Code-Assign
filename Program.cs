@@ -58,7 +58,7 @@ int Menu(string[] menu, string name)
         int.TryParse(Console.ReadLine(), out choice);
         if (choice < 1 || choice > menu.Length)
         {
-            TextColor(ConsoleColor.Red, " *Input invalid!");
+            TextColor(ConsoleColor.Red, "Lua chon khong hop le!");
         }
     } while (choice < 1 || choice > menu.Length);
     return choice;
@@ -104,7 +104,7 @@ void MenuBook()
                                 if (option == 'y' || option == 'Y')
                                 {
                                     books.CheckUpdate(true);
-                                    Console.WriteLine("Thong tin da duoc cap nhat!");
+                                    TextColor(ConsoleColor.Green, "Thong tin da duoc cap nhat!");
                                     break;
                                 }
                                 else if (option == 'n' || option == 'N')
@@ -188,7 +188,7 @@ void MenuMember()
                                 if (option == 'y' || option == 'Y')
                                 {
                                     members.CheckUpdate(true);
-                                    Console.WriteLine("Thong tin da duoc cap nhat!");
+                                    TextColor(ConsoleColor.Green, "Thong tin da duoc cap nhat!");
                                     break;
                                 }
                                 else if (option == 'n' || option == 'N')

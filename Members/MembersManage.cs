@@ -27,7 +27,7 @@ public class MembersManage
             member.idMember = Console.ReadLine() ?? "";
             if (CheckId(member.idMember))
             {
-                Console.WriteLine("Ma the da ton tai, vui long nhap lai");
+                TextColor(ConsoleColor.Yellow, "Ma the da ton tai, vui long nhap lai!");
             }
             else
             {
@@ -48,12 +48,12 @@ public class MembersManage
                 }
                 else
                 {
-                    Console.WriteLine("So CMND khong hop le, vui long nhap lai");
+                    TextColor(ConsoleColor.Yellow, "So CMND khong hop le, vui long nhap lai!");
                 }
             }
             else
             {
-                Console.WriteLine("So CMND khong hop le, vui long nhap lai");
+                TextColor(ConsoleColor.Yellow, "So CMND khong hop le, vui long nhap lai!");
             }
         }
         Console.Write("Nhap ngay tao: ");
@@ -88,12 +88,13 @@ public class MembersManage
                     }
                     else
                     {
-                        Console.WriteLine("So CMND khong hop le, vui long nhap lai");
+                        TextColor(ConsoleColor.Yellow, "So CMND khong hop le, vui long nhap lai!");
+
                     }
                 }
                 else
                 {
-                    Console.WriteLine("So CMND khong hop le, vui long nhap lai");
+                    TextColor(ConsoleColor.Yellow, "So CMND khong hop le, vui long nhap lai!");
                 }
             }
             Console.Write("Sua ngay tao: ");
@@ -103,7 +104,8 @@ public class MembersManage
         }
         else
         {
-            Console.WriteLine($"Thanh vien co ma the {idMember} khong ton tai.");
+            Console.WriteLine();
+            TextColor(ConsoleColor.Yellow, $"Thanh vien co ma the {idMember} khong ton tai!");
             return false;
         }
     }
@@ -192,5 +194,12 @@ public class MembersManage
             return false;
         }
         return true;
+    }
+
+    void TextColor(ConsoleColor color, string str)
+    {
+        Console.ForegroundColor = color;
+        Console.WriteLine(str);
+        Console.ResetColor();
     }
 }

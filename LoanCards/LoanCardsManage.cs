@@ -42,12 +42,12 @@ public class LoanCardsManage
                 }
                 else
                 {
-                    Console.WriteLine("Ma the thu vien khong ton tai, vui long nhap lai");
+                    TextColor(ConsoleColor.Yellow, "Ma the thu vien khong ton tai, vui long nhap lai!");
                 }
             }
             catch (System.Exception)
             {
-                Console.WriteLine("Loi chua co ma the thu vien, vui long tao moi!");
+                TextColor(ConsoleColor.Red, "Loi chua co ma the thu vien, vui long tao moi!");
                 return false;
             }
         }
@@ -65,12 +65,12 @@ public class LoanCardsManage
                 }
                 else
                 {
-                    Console.WriteLine("Ma sach khong ton tai, vui long nhap lai");
+                    TextColor(ConsoleColor.Yellow, "Ma sach khong ton tai, vui long nhap lai!");
                 }
             }
             catch (System.Exception)
             {
-                Console.WriteLine("Loi chua co ma sach, vui long tao moi!");
+                TextColor(ConsoleColor.Red, "Loi chua co ma sach, vui long tao moi!");
                 return false;
             }
         }
@@ -137,5 +137,12 @@ public class LoanCardsManage
             }
         }
         return false;
+    }
+
+    void TextColor(ConsoleColor color, string str)
+    {
+        Console.ForegroundColor = color;
+        Console.WriteLine(str);
+        Console.ResetColor();
     }
 }
