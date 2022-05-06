@@ -91,7 +91,12 @@ public class LoanCardsManage
     public int NumberOfLoanCards()
     {
         listLoanCards = file.ReadFile<LoanCards>(path);
-        return listLoanCards.Count;
+        int Count = 0;
+        if (listLoanCards != null)
+        {
+            Count = listLoanCards.Count;
+        }
+        return Count;
     }
 
     public bool CheckIdMember(string idMember)
