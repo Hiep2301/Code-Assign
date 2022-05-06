@@ -251,6 +251,10 @@ void MenuLoanCard()
                     {
                         TextColor(ConsoleColor.Green, "Them moi thanh cong!");
                     }
+                    else
+                    {
+                        break;
+                    }
                     Console.Write("Ban muon tiep tuc?(Y/N): ");
                     option = Convert.ToChar(Console.ReadLine() ?? "");
                     if (option == 'n' || option == 'N')

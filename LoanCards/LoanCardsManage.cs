@@ -32,30 +32,46 @@ public class LoanCardsManage
         loanCard.idLoanCard = Console.ReadLine() ?? "";
         while (true)
         {
-            Console.Write("Nhap ma the thu vien: ");
-            loanCard.idMember = Console.ReadLine() ?? "";
-            if (CheckIdMember(loanCard.idMember))
+            try
             {
-                break;
+                Console.Write("Nhap ma the thu vien: ");
+                loanCard.idMember = Console.ReadLine() ?? "";
+                if (CheckIdMember(loanCard.idMember))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Ma the thu vien khong ton tai, vui long nhap lai");
+                }
             }
-            else
+            catch (System.Exception)
             {
-                Console.WriteLine("Ma the thu vien khong ton tai, vui long nhap lai");
+                Console.WriteLine("Loi chua co ma the thu vien, vui long tao moi!");
+                return false;
             }
         }
         Console.Write("Nhap ten sach muon: ");
         loanCard.nameBook = Console.ReadLine() ?? "";
         while (true)
         {
-            Console.Write("Nhap ma sach: ");
-            loanCard.idBook = Console.ReadLine() ?? "";
-            if (CheckIdBook(loanCard.idBook))
+            try
             {
-                break;
+                Console.Write("Nhap ma sach: ");
+                loanCard.idBook = Console.ReadLine() ?? "";
+                if (CheckIdBook(loanCard.idBook))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Ma sach khong ton tai, vui long nhap lai");
+                }
             }
-            else
+            catch (System.Exception)
             {
-                Console.WriteLine("Ma sach khong ton tai, vui long nhap lai");
+                Console.WriteLine("Loi chua co ma sach, vui long tao moi!");
+                return false;
             }
         }
         Console.Write("Nhap ngay gio tao: ");
