@@ -1,6 +1,8 @@
 ﻿BooksManage books = new BooksManage();
 MembersManage members = new MembersManage();
 LoanCardsManage loanCards = new LoanCardsManage();
+Console.InputEncoding = System.Text.Encoding.Unicode;
+Console.OutputEncoding = System.Text.Encoding.Unicode;
 char option;
 int choice;
 
@@ -8,7 +10,7 @@ MainMenu();
 
 void MainMenu()
 {
-    string[] menu = { "Quan ly sach", "Quan ly the thu vien", "Quan ly the muon sach", "Thoat" };
+    string[] menu = { "Quản ly sach", "Quan ly the thu vien", "Quan ly the muon sach", "Thoat" };
     string name = "---Chao mung den voi thu vien---";
 
     do
