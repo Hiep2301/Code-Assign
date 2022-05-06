@@ -169,12 +169,7 @@ public class MembersManage
     public int NumberOfMembers()
     {
         listMembers = file.ReadFile<Members>(path);
-        int Count = 0;
-        if (listMembers != null)
-        {
-            Count = listMembers.Count;
-        }
-        return Count;
+        return listMembers.Count;
     }
 
     public bool IsNumber(string idCard)

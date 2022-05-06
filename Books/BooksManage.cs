@@ -136,11 +136,6 @@ public class BooksManage
     public int NumberOfBooks()
     {
         listBooks = file.ReadFile<Books>(path);
-        int Count = 0;
-        if (listBooks != null)
-        {
-            Count = listBooks.Count;
-        }
-        return Count;
+        return listBooks.Count;
     }
 }
