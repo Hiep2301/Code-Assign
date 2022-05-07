@@ -1,8 +1,6 @@
 ﻿BooksManage books = new BooksManage();
 MembersManage members = new MembersManage();
 LoanCardsManage loanCards = new LoanCardsManage();
-Console.InputEncoding = System.Text.Encoding.Unicode;
-Console.OutputEncoding = System.Text.Encoding.Unicode;
 char option;
 
 MainMenu();
