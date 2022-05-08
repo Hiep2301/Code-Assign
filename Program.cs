@@ -41,14 +41,14 @@ void TextColor(ConsoleColor color, string str)
 int Menu(string[] menu, string name)
 {
     Console.Clear();
-    Console.WriteLine("══════════════════════════════════════");
+    Console.WriteLine("════════════════════════════════");
     Console.WriteLine(name);
-    Console.WriteLine("══════════════════════════════════════");
+    Console.WriteLine("════════════════════════════════");
     for (int i = 0; i < menu.Length; i++)
     {
         Console.WriteLine($"{i + 1}. {menu[i]}");
     }
-    Console.WriteLine("══════════════════════════════════════");
+    Console.WriteLine("════════════════════════════════");
     int choice;
     do
     {

@@ -127,17 +127,18 @@ public class MembersManage
         Console.Clear();
         listMembers = file.ReadFile<Members>(path);
 
-        Console.WriteLine("══════════════════════════════════════");
+        Console.WriteLine("════════════════════════════════════════════════════════");
         Console.WriteLine("Danh sach the thu vien");
-        Console.WriteLine("══════════════════════════════════════");
-        Console.WriteLine($"{"Ma the",-5} | {"Ten chu the",-20} | {"CMND",-15} | {"Ngay tao",-5}");
-        Console.WriteLine("--------------------------------------");
+        Console.WriteLine("════════════════════════════════════════════════════════");
+        Console.WriteLine($"{"Ma the",-5} | {"Ten chu the",-21} | {"CMND",-10} | {"Ngay tao",-5}");
+        Console.WriteLine("────────────────────────────────────────────────────────");
         foreach (Members member in listMembers)
         {
             DateTime dateTime = DateTime.ParseExact(member.dateCreated ?? "", "ddMMyyyy", null);
-            Console.WriteLine($"{member.idMember,-8} {member.nameMember,-22} {member.idCard,-17} {dateTime.ToString("dd/MM/yyyy"),-19}");
+            Console.WriteLine($"{member.idMember,-8} {member.nameMember,-23} {member.idCard,-12} {dateTime.ToString("dd/MM/yyyy"),-14}");
         }
-        Console.WriteLine("══════════════════════════════════════");
+        Console.WriteLine("════════════════════════════════════════════════════════");
+
     }
 
     public Members FindByIdMember(string idMember)
