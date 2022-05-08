@@ -107,18 +107,17 @@ public class BooksManage
 
     public Books FindByIdBook(string idBook)
     {
-        Books bookSearch = null!;
         if (listBooks != null && listBooks.Count > 0)
         {
             foreach (Books book in listBooks)
             {
                 if (book.idBook == idBook)
                 {
-                    bookSearch = book;
+                    return book;
                 }
             }
         }
-        return bookSearch;
+        return null!;
     }
 
     public bool CheckId(string idBook)

@@ -142,18 +142,17 @@ public class MembersManage
 
     public Members FindByIdMember(string idMember)
     {
-        Members memberSearch = null!;
         if (listMembers != null && listMembers.Count > 0)
         {
             foreach (Members member in listMembers)
             {
                 if (member.idMember == idMember)
                 {
-                    memberSearch = member;
+                    return member;
                 }
             }
         }
-        return memberSearch;
+        return null!;
     }
 
     public bool CheckId(string idMember)
