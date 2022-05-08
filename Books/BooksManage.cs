@@ -18,9 +18,9 @@ public class BooksManage
         }
         Books book = new Books();
 
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
         Console.WriteLine("Them moi mot quyen sach");
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
         while (true)
         {
             Console.Write("Nhap ma sach: ");
@@ -42,7 +42,7 @@ public class BooksManage
         int.TryParse(Console.ReadLine(), out book.qtyInStock);
         Console.Write("Nhap danh muc: ");
         book.category = Console.ReadLine() ?? "";
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
 
         listBooks.Add(book);
         file.WriteFile<Books>(listBooks, path);
@@ -55,9 +55,9 @@ public class BooksManage
         if (book != null)
         {
             Console.Clear();
-            Console.WriteLine("======================================================================");
+            Console.WriteLine("══════════════════════════════════════");
             Console.WriteLine("Cap nhat thong tin sach");
-            Console.WriteLine("======================================================================");
+            Console.WriteLine("══════════════════════════════════════");
             Console.Write("Sua ten sach: ");
             book.nameBook = Console.ReadLine() ?? "";
             Console.Write("Sua ten tac gia: ");
@@ -66,7 +66,7 @@ public class BooksManage
             book.qtyInStock = Convert.ToInt32(Console.ReadLine());
             Console.Write("Sua danh muc: ");
             book.category = Console.ReadLine() ?? "";
-            Console.WriteLine("======================================================================");
+            Console.WriteLine("══════════════════════════════════════");
             return true;
         }
         else
@@ -93,16 +93,16 @@ public class BooksManage
         Console.Clear();
         listBooks = file.ReadFile<Books>(path);
 
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
         Console.WriteLine("Danh sach sach");
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
         Console.WriteLine($"{"Ma sach",-5} | {"Ten sach",-20} | {"Ten tac gia",-15} | {"So luong",-5} | {"Danh muc",-15}");
-        Console.WriteLine("----------------------------------------------------------------------");
+        Console.WriteLine("--------------------------------------");
         foreach (Books book in listBooks)
         {
             Console.WriteLine($"{book.idBook,-9} {book.nameBook,-22} {book.authorName,-17} {book.qtyInStock,-10} {book.category,-10}");
         }
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
     }
 
     public Books FindByIdBook(string idBook)

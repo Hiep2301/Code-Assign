@@ -18,9 +18,9 @@ public class MembersManage
         }
         Members member = new Members();
 
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
         Console.WriteLine("Them moi mot the");
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
         while (true)
         {
             Console.Write("Nhap ma the: ");
@@ -58,7 +58,7 @@ public class MembersManage
         }
         Console.Write("Nhap ngay tao: ");
         member.dateCreated = Console.ReadLine() ?? "";
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
 
         listMembers.Add(member);
         file.WriteFile<Members>(listMembers, path);
@@ -71,9 +71,9 @@ public class MembersManage
         if (member != null)
         {
             Console.Clear();
-            Console.WriteLine("======================================================================");
+            Console.WriteLine("══════════════════════════════════════");
             Console.WriteLine("Cap nhat thong tin the");
-            Console.WriteLine("======================================================================");
+            Console.WriteLine("══════════════════════════════════════");
             Console.Write("Sua ten chu the: ");
             member.nameMember = Console.ReadLine() ?? "";
             while (true)
@@ -99,7 +99,7 @@ public class MembersManage
             }
             Console.Write("Sua ngay tao: ");
             member.dateCreated = Console.ReadLine() ?? "";
-            Console.WriteLine("======================================================================");
+            Console.WriteLine("══════════════════════════════════════");
             return true;
         }
         else
@@ -127,17 +127,17 @@ public class MembersManage
         Console.Clear();
         listMembers = file.ReadFile<Members>(path);
 
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
         Console.WriteLine("Danh sach the thu vien");
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
         Console.WriteLine($"{"Ma the",-5} | {"Ten chu the",-20} | {"CMND",-15} | {"Ngay tao",-5}");
-        Console.WriteLine("----------------------------------------------------------------------");
+        Console.WriteLine("--------------------------------------");
         foreach (Members member in listMembers)
         {
             DateTime dateTime = DateTime.ParseExact(member.dateCreated ?? "", "ddMMyyyy", null);
             Console.WriteLine($"{member.idMember,-8} {member.nameMember,-22} {member.idCard,-17} {dateTime.ToString("dd/MM/yyyy"),-19}");
         }
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
     }
 
     public Members FindByIdMember(string idMember)

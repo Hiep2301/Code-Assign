@@ -41,14 +41,14 @@ void TextColor(ConsoleColor color, string str)
 int Menu(string[] menu, string name)
 {
     Console.Clear();
-    Console.WriteLine("================================");
+    Console.WriteLine("══════════════════════════════════════");
     Console.WriteLine(name);
-    Console.WriteLine("================================");
+    Console.WriteLine("══════════════════════════════════════");
     for (int i = 0; i < menu.Length; i++)
     {
         Console.WriteLine($"{i + 1}. {menu[i]}");
     }
-    Console.WriteLine("================================");
+    Console.WriteLine("══════════════════════════════════════");
     int choice;
     do
     {
@@ -64,7 +64,6 @@ int Menu(string[] menu, string name)
 
 void MenuBook()
 {
-    Console.Clear();
     string[] menu = { "Xem danh sach sach", "Cap nhat thong tin sach", "Them moi mot quyen sach", "Tro ve menu chinh" };
     string name = "Quan ly sach";
     int choice;
@@ -148,7 +147,6 @@ void MenuBook()
 
 void MenuMember()
 {
-    Console.Clear();
     string[] menu = { "Xem danh sach the thu vien", "Cap nhat thong tin the", "Them moi mot the", "Tro ve menu chinh" };
     string name = "Quan ly the thu vien";
     int choice;
@@ -232,7 +230,6 @@ void MenuMember()
 
 void MenuLoanCard()
 {
-    Console.Clear();
     string[] menu = { "Tao moi the muon sach", "Hien thi tat ca the muon sach", "Tro ve menu chinh" };
     string name = "Quan ly the muon sach";
     int choice;

@@ -25,9 +25,9 @@ public class LoanCardsManage
         }
         LoanCards loanCard = new LoanCards();
 
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
         Console.WriteLine("Tao moi the muon sach");
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
         while (true)
         {
             Console.Write("Nhap ma phieu muon: ");
@@ -89,7 +89,7 @@ public class LoanCardsManage
         loanCard.dateCreated = Console.ReadLine() ?? "";
         Console.Write("Nhap ngay gio huy: ");
         loanCard.dateCanceled = Console.ReadLine() ?? "";
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
 
         listLoanCards.Add(loanCard);
         file.WriteFile<LoanCards>(listLoanCards, path);
@@ -101,18 +101,18 @@ public class LoanCardsManage
         Console.Clear();
         listLoanCards = file.ReadFile<LoanCards>(path);
 
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
         Console.WriteLine("Danh sach phieu muon sach");
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
         Console.WriteLine($"{"Ma phieu",-5} | {"Ma the thu vien",-20} | {"Ngay gio muon",-15} | {"Ngay gio tra",-5} | {"Ten sach",-10}");
-        Console.WriteLine("----------------------------------------------------------------------");
+        Console.WriteLine("--------------------------------------");
         foreach (LoanCards loanCard in listLoanCards)
         {
             DateTime dateTimeCreated = DateTime.ParseExact(loanCard.dateCreated ?? "", "ddMMyyyy", null);
             DateTime dateTimeCanceled = DateTime.ParseExact(loanCard.dateCanceled ?? "", "ddMMyyyy", null);
             Console.WriteLine($"{loanCard.idLoanCard,-10} {loanCard.idMember,-22} {dateTimeCreated.ToString("dd/MM/yyyy"),-17} {dateTimeCanceled.ToString("dd/MM/yyyy"),-14} {loanCard.nameBook,-20}");
         }
-        Console.WriteLine("======================================================================");
+        Console.WriteLine("══════════════════════════════════════");
     }
 
     public int NumberOfLoanCards()
