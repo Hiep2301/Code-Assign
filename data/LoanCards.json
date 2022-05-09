@@ -14,5 +14,13 @@
     "idBook": "a",
     "dateCreated": "1000 02022020",
     "dateCanceled": "1000 04032020"
+  },
+  {
+    "idLoanCard": "c",
+    "idMember": "b",
+    "nameBook": "a",
+    "idBook": "b",
+    "dateCreated": "0814 09052022",
+    "dateCanceled": "0814 16052022"
   }
 ]
