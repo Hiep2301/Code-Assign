@@ -1,3 +1,5 @@
+using System.Globalization;
+
 public class BooksManage
 {
     private List<Books> listBooks;
@@ -6,6 +8,7 @@ public class BooksManage
         listBooks = new List<Books>();
     }
     FileIO file = new FileIO();
+    TextInfo textInfo = new CultureInfo("vi-VN", false).TextInfo;
     const string path = @"data\Books.json";
 
     public bool Add()
@@ -100,7 +103,7 @@ public class BooksManage
         Console.WriteLine("──────────────────────────────────────────────────────────────────────");
         foreach (Books book in listBooks)
         {
-            Console.WriteLine($"{book.idBook,-9} {book.nameBook,-22} {book.authorName,-17} {book.qtyInStock,-10} {book.category,-10}");
+            Console.WriteLine($"{book.idBook,-9} {textInfo.ToTitleCase(book.nameBook ?? ""),-22} {textInfo.ToTitleCase(book.authorName ?? ""),-17} {book.qtyInStock,-10} {textInfo.ToTitleCase(book.category ?? ""),-10}");
         }
         Console.WriteLine("══════════════════════════════════════════════════════════════════════");
     }

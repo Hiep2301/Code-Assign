@@ -53,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\VTC Academy\\OOP\\Assignment\\Code Assign\\Code Assign.csproj",
+      "projectUniqueName": "D:\\VTC Academy\\OOP\\Assignment\\Code Assign\\Code Assign.csproj",
       "projectName": "Code Assign",
-      "projectPath": "d:\\VTC Academy\\OOP\\Assignment\\Code Assign\\Code Assign.csproj",
+      "projectPath": "D:\\VTC Academy\\OOP\\Assignment\\Code Assign\\Code Assign.csproj",
       "packagesPath": "C:\\Users\\ngotr\\.nuget\\packages\\",
-      "outputPath": "d:\\VTC Academy\\OOP\\Assignment\\Code Assign\\obj\\",
+      "outputPath": "D:\\VTC Academy\\OOP\\Assignment\\Code Assign\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ngotr\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -104,7 +104,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

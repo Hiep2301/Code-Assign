@@ -1,3 +1,5 @@
+using System.Globalization;
+
 public class LoanCardsManage
 {
     private List<LoanCards> listLoanCards;
@@ -11,6 +13,7 @@ public class LoanCardsManage
         listBooks = new List<Books>();
     }
     FileIO file = new FileIO();
+    TextInfo textInfo = new CultureInfo("vi-VN", false).TextInfo;
     const string path = @"data\LoanCards.json";
 
     public bool Add()
@@ -111,7 +114,7 @@ public class LoanCardsManage
         {
             DateTime dateTimeCreated = DateTime.ParseExact(loanCard.dateCreated ?? "", "ddMMyyyy", null);
             DateTime dateTimeCanceled = DateTime.ParseExact(loanCard.dateCanceled ?? "", "ddMMyyyy", null);
-            Console.WriteLine($"{loanCard.idLoanCard,-10} {loanCard.idMember,-17} {dateTimeCreated.ToString("dd/MM/yyyy"),-15} {dateTimeCanceled.ToString("dd/MM/yyyy"),-14} {loanCard.nameBook,-20}");
+            Console.WriteLine($"{loanCard.idLoanCard,-10} {loanCard.idMember,-17} {dateTimeCreated.ToString("dd/MM/yyyy"),-15} {dateTimeCanceled.ToString("dd/MM/yyyy"),-14} {textInfo.ToTitleCase(loanCard.nameBook ?? ""),-20}");
         }
         Console.WriteLine("════════════════════════════════════════════════════════════════════");
     }

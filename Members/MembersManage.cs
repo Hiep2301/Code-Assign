@@ -1,3 +1,5 @@
+using System.Globalization;
+
 public class MembersManage
 {
     private List<Members> listMembers;
@@ -6,6 +8,7 @@ public class MembersManage
         listMembers = new List<Members>();
     }
     FileIO file = new FileIO();
+    TextInfo textInfo = new CultureInfo("vi-VN", false).TextInfo;
     const string path = @"data\Members.json";
 
     public bool Add()
@@ -135,7 +138,7 @@ public class MembersManage
         foreach (Members member in listMembers)
         {
             DateTime dateTime = DateTime.ParseExact(member.dateCreated ?? "", "ddMMyyyy", null);
-            Console.WriteLine($"{member.idMember,-8} {member.nameMember,-23} {member.idCard,-12} {dateTime.ToString("dd/MM/yyyy"),-14}");
+            Console.WriteLine($"{member.idMember,-8} {textInfo.ToTitleCase(member.nameMember ?? ""),-23} {member.idCard,-12} {dateTime.ToString("dd/MM/yyyy"),-14}");
         }
         Console.WriteLine("════════════════════════════════════════════════════════");
 
