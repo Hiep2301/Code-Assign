@@ -104,19 +104,19 @@ public class LoanCardsManage
         Console.Clear();
         listLoanCards = file.ReadFile<LoanCards>(path);
 
-        Console.WriteLine("════════════════════════════════════════════════════════════════════");
+        Console.WriteLine("═══════════════════════════════════════════════════════════════════════════");
         Console.WriteLine("Danh sach phieu muon sach");
-        Console.WriteLine("════════════════════════════════════════════════════════════════════");
-        Console.WriteLine($"{"Ma phieu",-5} | {"Ma the thu vien",-15} | {"Ngay gio muon",-13} | {"Ngay gio tra",-5} | {"Ten sach",-10}");
-        Console.WriteLine("────────────────────────────────────────────────────────────────────");
+        Console.WriteLine("═══════════════════════════════════════════════════════════════════════════");
+        Console.WriteLine($"{"Ma phieu",-5} | {"Ma the thu vien",-15} | {"Ngay gio muon",-16} | {"Ngay gio tra",-16} | {"Ten sach",-10}");
+        Console.WriteLine("───────────────────────────────────────────────────────────────────────────");
 
         foreach (LoanCards loanCard in listLoanCards)
         {
-            DateTime dateTimeCreated = DateTime.ParseExact(loanCard.dateCreated ?? "", "ddMMyyyy", null);
-            DateTime dateTimeCanceled = DateTime.ParseExact(loanCard.dateCanceled ?? "", "ddMMyyyy", null);
-            Console.WriteLine($"{loanCard.idLoanCard,-10} {loanCard.idMember,-17} {dateTimeCreated.ToString("dd/MM/yyyy"),-15} {dateTimeCanceled.ToString("dd/MM/yyyy"),-14} {textInfo.ToTitleCase(loanCard.nameBook ?? ""),-20}");
+            DateTime dateTimeCreated = DateTime.ParseExact(loanCard.dateCreated ?? "", "HHmm ddMMyyyy", null);
+            DateTime dateTimeCanceled = DateTime.ParseExact(loanCard.dateCanceled ?? "", "HHmm ddMMyyyy", null);
+            Console.WriteLine($"{loanCard.idLoanCard,-10} {loanCard.idMember,-17} {dateTimeCreated.ToString("HH:mm dd/MM/yyyy"),-18} {dateTimeCanceled.ToString("HH:mm dd/MM/yyyy"),-18} {textInfo.ToTitleCase(loanCard.nameBook ?? ""),-20}");
         }
-        Console.WriteLine("════════════════════════════════════════════════════════════════════");
+        Console.WriteLine("═══════════════════════════════════════════════════════════════════════════");
     }
 
     public int NumberOfLoanCards()

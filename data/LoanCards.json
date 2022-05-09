@@ -1,1 +1,18 @@
-[{"idLoanCard":"a","idMember":"a","nameBook":"a","idBook":"a","dateCreated":"01012001","dateCanceled":"02032001"},{"idLoanCard":"b","idMember":"a","nameBook":"a","idBook":"a","dateCreated":"02022020","dateCanceled":"04032020"}]
+[
+  {
+    "idLoanCard": "a",
+    "idMember": "a",
+    "nameBook": "a",
+    "idBook": "a",
+    "dateCreated": "0900 01012001",
+    "dateCanceled": "0900 02032001"
+  },
+  {
+    "idLoanCard": "b",
+    "idMember": "a",
+    "nameBook": "a",
+    "idBook": "a",
+    "dateCreated": "1000 02022020",
+    "dateCanceled": "1000 04032020"
+  }
+]
