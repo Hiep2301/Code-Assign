@@ -277,5 +277,4 @@ void WaitForButton(string msg)
 {
     Console.Write($"{msg}");
     Console.ReadKey();
-    Console.WriteLine();
 }
