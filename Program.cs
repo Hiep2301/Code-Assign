@@ -7,7 +7,6 @@ MainMenu();
 
 void MainMenu()
 {
-
     string[] menu = { "Quan ly sach", "Quan ly the thu vien", "Quan ly the muon sach", "Thoat" };
     string name = "---Chao mung den voi thu vien---";
     int choice;
