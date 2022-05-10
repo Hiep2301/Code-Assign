@@ -66,7 +66,6 @@ void MenuBook()
     string[] menu = { "Xem danh sach sach", "Cap nhat thong tin sach", "Them moi mot quyen sach", "Tro ve menu chinh" };
     string name = "Quan ly sach";
     int choice;
-
     do
     {
         choice = Menu(menu, name);
@@ -149,7 +148,6 @@ void MenuMember()
     string[] menu = { "Xem danh sach the thu vien", "Cap nhat thong tin the", "Them moi mot the", "Tro ve menu chinh" };
     string name = "Quan ly the thu vien";
     int choice;
-
     do
     {
         choice = Menu(menu, name);
@@ -232,7 +230,6 @@ void MenuLoanCard()
     string[] menu = { "Tao moi the muon sach", "Hien thi tat ca the muon sach", "Tro ve menu chinh" };
     string name = "Quan ly the muon sach";
     int choice;
-
     do
     {
         choice = Menu(menu, name);
