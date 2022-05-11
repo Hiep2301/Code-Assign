@@ -1,1 +1,44 @@
-[{"idBook":"a","nameBook":"a","authorName":"a","qtyInStock":1,"category":"a"},{"idBook":"b","nameBook":"nhat ky trong tu","authorName":"HCM","qtyInStock":2,"category":"b"}]
+[
+  {
+    "idBook": "LAL",
+    "nameBook": "b",
+    "authorName": "b",
+    "qtyInStock": 2,
+    "category": "b"
+  },
+  {
+    "idBook": "LBL",
+    "nameBook": "b",
+    "authorName": "b",
+    "qtyInStock": 12,
+    "category": "b"
+  },
+  {
+    "idBook": "LCL",
+    "nameBook": "c",
+    "authorName": "c",
+    "qtyInStock": 3,
+    "category": "c"
+  },
+  {
+    "idBook": "LDL",
+    "nameBook": "d",
+    "authorName": "d",
+    "qtyInStock": 4,
+    "category": "d"
+  },
+  {
+    "idBook": "LEL",
+    "nameBook": "e",
+    "authorName": "e",
+    "qtyInStock": 5,
+    "category": "e"
+  },
+  {
+    "idBook": "LFL",
+    "nameBook": "n",
+    "authorName": "n",
+    "qtyInStock": 8,
+    "category": "n"
+  }
+]
